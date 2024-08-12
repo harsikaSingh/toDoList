@@ -1,0 +1,147 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    background: url('minimal-background-purple-color-with-two-overlapping-waves-suitable-for-design-needs-display-website-ui-and-others-free-photo.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    /* color: #F5F5F5; Soft light color for better contrast */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 350px;
+}
+
+h1 {
+    color: #a58fb6;
+    font-family: "Lato", sans-serif;
+    font-weight: bold;
+    font-style: normal; 
+    text-align: center;
+    margin-bottom: 20px;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+form {
+    background-color: rgba(46, 3, 89, 0.9); /* Deep purple with higher transparency */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+input{
+    width: 170px;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #7431A8; /* Medium purple matching the background tones */
+    border-radius: 4px;
+    outline: none;
+    background-color: rgba(74, 20, 140, 0.8); /* Slightly transparent purple */
+    color: #F5F5F5;
+    transition: border-color 0.3s ease-in-out;
+}
+
+input::placeholder {
+    color: #C7BFD1; /* Light grey with a hint of purple */
+}
+
+input:focus {
+    border-color: #AA47BC; /* Lighter, vibrant purple */
+}
+
+.btn {
+    padding: 10px 15px;
+    background-color: #7631ab; /* Medium purple */
+    color: #FFFFFF;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #AA47BC; /* Light, vibrant purple */
+    transform: scale(1.05);
+}
+
+.todo-lists-elem {
+    margin-top: 20px;
+}
+
+.main_todo_div {
+    background-color: rgba(46, 3, 89, 0.9); /* Matching form background */
+    padding: 10px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.main_todo_div li {
+    list-style: none;
+    font-size: 16px;
+    color: #FFFFFF; /* Pure white for clarity */
+}
+
+.deleteBtn {
+    background-color: #AA47BC; /* Lighter purple for contrast */
+    color: #FFFFFF;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.deleteBtn:hover {
+    background-color: #7431A8; /* Darker purple to match other elements */
+    transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
